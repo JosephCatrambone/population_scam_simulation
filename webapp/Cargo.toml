@@ -12,6 +12,8 @@ wasm-bindgen-test = "0.3.18"
 simulation = { path = "../simulation" }
 js-sys = "0.3"
 yew = "0.19"
+getrandom = { version = "0.2", features = ["js"] }  # This is added to force random to build for wasm when the target wasm32-unknown-unknown is used (wasm-pack by default)
+# https://docs.rs/getrandom/latest/getrandom/#supported-targets
 
 [dependencies.web-sys]
 version = "0.3"

@@ -61,13 +61,19 @@ Parents, guardians, and custodians have access to their charges' social security
 
 # Development:
 
+### Testing and Development:
+
+ - Use `trunk --config=webapp/Trunk.toml serve` to monitor + automatically refresh on changes.
+ - Use `cargo test -p simulation|console|webapp` to run tests.
+
 ### Building Webapp:
 
-1. cargo build -p webapp
+1. Make sure the target wasm32-unknown-unknown is available: `rustup target add wasm32-unknown-unknown`
+1. Run `trunk --config=webapp/Trunk.toml build`
 
-### Developing Webapp:
+### Building Console App:
 
-1. trunk  
+1. cargo build -p console
 
 ```toml
 # netlify.toml

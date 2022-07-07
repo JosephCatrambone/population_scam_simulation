@@ -34,7 +34,7 @@ impl Component for Model {
 		let link = ctx.link();
 		html! {
             <div>
-                <button onclick={link.callback(|_| Msg::AddOne)}>{ "+1" }</button>
+                <button onclick={link.callback(|_| Msg::AddOne)}>{ "+1 asdf" }</button>
                 <p>{ self.value }</p>
             </div>
         }

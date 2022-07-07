@@ -1,16 +1,9 @@
 [package]
-name = "simulation"  # This MUST match the directory info.
+name = "console"
 version = "0.1.0"
 edition = "2021"
 
 # See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
 
-[lib]
-crate-type = ["cdylib"]
-
 [dependencies]
-
-
-[dependencies.rand]
-version = "0.8"
-features = ["small_rng"]
+simulation = { path = "../simulation" }

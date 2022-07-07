@@ -1,14 +1,3 @@
-[package]
-version = "0.1.0"
-name = "population-scam-simulation"
-repository = "https://github.com/seed-rs/seed-quickstart"
-authors = ["Joseph Catrambone <jo.jcat@gmail.com>"]
-description = "App Description"
-categories = ["category"]
-license = "MIT"
-readme = "./README.md"
-edition = "2021"
-
 [workspace]
 members = [
   "simulation",
@@ -16,12 +5,16 @@ members = [
   "webapp",
 ]
 
-[profile.release]
-lto = true
-opt-level = 'z'
-codegen-units = 1
+# If a [workspace] is present, [package] is optional.
+# If [package] is present it defines the root package.  If it's not, this is called a 'virtual manifest'.
+# See more at https://doc.rust-lang.org/cargo/reference/workspaces.html
 
-[package.metadata.wasm-pack.profile.release]
-wasm-opt = ['-Os']
+#[profile.release]
+#lto = true
+#opt-level = 'z'
+#codegen-units = 1
+
+#[package.metadata.wasm-pack.profile.release]
+#wasm-opt = ['-Os']
 
 
