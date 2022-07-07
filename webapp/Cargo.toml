@@ -1,0 +1,33 @@
+[package]
+name = "webapp"
+version = "0.1.0"
+edition = "2021"
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[dev-dependencies]
+wasm-bindgen-test = "0.3.18"
+
+[dependencies]
+simulation = { path = "../simulation" }
+js-sys = "0.3"
+yew = "0.19"
+
+[dependencies.web-sys]
+version = "0.3"
+features = [
+    'Window',
+    'Document',
+    'Element',
+    'HtmlElement',
+    'Node',
+    'MediaQueryList'
+]
+
+[profile.release]
+lto = true
+opt-level = 'z'
+codegen-units = 1
+
+[package.metadata.wasm-pack.profile.release]
+wasm-opt = ['-Os']

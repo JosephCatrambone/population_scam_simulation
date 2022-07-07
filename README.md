@@ -59,8 +59,6 @@ If a person is more likely to be buying a product online, they're more likely to
 
 Parents, guardians, and custodians have access to their charges' social security numbers, bank accounts, and personal information.  If the scam reports include numbers for this group, that could conceivably inflate the scam rate for individuals.
 
-# Using the Simulator:
-
 # Development:
 
 ## Building:
