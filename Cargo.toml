@@ -7,7 +7,7 @@ description = "App Description"
 categories = ["category"]
 license = "MIT"
 readme = "./README.md"
-edition = "2018"
+edition = "2021"
 
 [lib]
 crate-type = ["cdylib"]
@@ -17,6 +17,21 @@ wasm-bindgen-test = "0.3.18"
 
 [dependencies]
 seed = "0.8.0"
+
+[dependencies.rand]
+version = "0.8.3"
+features = ["small_rng"]
+
+[dependencies.web-sys]
+version = "0.3.45"
+features = [
+    'Window',
+    'Document',
+    'Element',
+    'HtmlElement',
+    'Node',
+    'MediaQueryList'
+]
 
 [profile.release]
 lto = true
