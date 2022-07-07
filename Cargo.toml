@@ -12,9 +12,16 @@ edition = "2021"
 [workspace]
 members = [
   "simulation",
+  "console",
   "webapp",
 ]
 
+[profile.release]
+lto = true
+opt-level = 'z'
+codegen-units = 1
 
+[package.metadata.wasm-pack.profile.release]
+wasm-opt = ['-Os']
 
 

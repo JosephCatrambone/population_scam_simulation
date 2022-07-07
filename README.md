@@ -61,21 +61,13 @@ Parents, guardians, and custodians have access to their charges' social security
 
 # Development:
 
-## Building:
+### Building Webapp:
 
-1. Make sure Git doesn't automatically convert your newlines to CRLF because linters don't like it.
-    - Run `$ git config --global core.autocrlf` in your terminal and it should return `input` or `false`. See [Git docs](https://git-scm.com/book/en/v2/Customizing-Git-Git-Configuration) for more info.
-1. Make sure you have Rust + cargo make installed: `$ cargo install cargo-make`
-2. Open a new terminal tab / window and run: `cargo make serve`
-3. Open a second terminal tab and run: `cargo make watch`
-4. Open [localhost:8000](http://localhost:8000) in a browser (I recommend Firefox and Chrome).
+1. cargo build -p webapp
 
-## Deploying:
+### Developing Webapp:
 
-1. Run `cargo make verify` in your terminal to format and lint the code.
-1. Run `cargo make build_release`.
-1. Upload `index.html` and `pkg` into your server's public folder.
-   - Don't forget to upload also configuration files for your hosting, see the [Netlify](https://www.netlify.com/) one below.
+1. trunk  
 
 ```toml
 # netlify.toml
